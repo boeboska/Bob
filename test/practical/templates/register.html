@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Register
+{% endblock %}
+
+{% block main %}
+    <form action="{{ url_for('register') }}" method="post">
+        <fieldset>
+            <div class="form-group">
+                <input autocomplete="off" autofocus class="form-control" name="groupname" placeholder="Group name"/>
+            </div>
+                <input autocomplete="off" autofocus class="form-control" name="student1" placeholder="student 1"/>
+                <input autocomplete="off" autofocus class="form-control" name="student2" placeholder="student 2"/>
+                <input autocomplete="off" autofocus class="form-control" name="student3" placeholder="student 3"/>
+                <input autocomplete="off" autofocus class="form-control" name="student4" placeholder="student 4"/>
+            <div class="form-group">
+                <button class="btn btn-default" type="submit">Register</button>
+            </div>
+        </fieldset>
+    </form>
+{% endblock %}
