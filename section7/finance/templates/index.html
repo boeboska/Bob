@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    index
+{% endblock %}
+
+{% block main %}
+    <body text><h1>Index</h1></body>
+    <table class="table">
+        <tr>
+            <th>Symbol</th>
+            <th>Name</th>
+            <th>Shares</th>
+            <th>Price</th>
+            <th>TOTAL</th>
+
+        </tr>
+
+        {% for info in index_info %}
+        <tr>
+            <td>{{info["symbol"]}}</td>
+            <td>{{info["name"]}}</td>
+            <td>{{info["SUM(amount)"]}}</td>
+            <td>{{info["price"]}}</td>
+            <td>{{info["price2"]}}</td>
+        </tr>
+        {% endfor %}
+        <tr>
+            <td>CASH</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>{{cash}}</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <th>{{share_amount_user}}</th>
+        </tr>
+
+
+    </table>
+{% endblock %}
